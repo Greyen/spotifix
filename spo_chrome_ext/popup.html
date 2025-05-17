@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Now Playing</title>
+    <style>
+        body { font-family: Arial, sans-serif; width: 250px; text-align: center; }
+        img { width: 100px; height: 100px; border-radius: 8px; display: none; }
+        #song-info, #error-msg { margin-top: 10px; }
+        #error-msg { color: red; display: none; }
+    </style>
+</head>
+<body>
+    <h2>Spotify Now Playing</h2>
+    <img id="album-art" src="" alt="Album Art">
+    <div id="song-info">
+        <p id="title">Title: Loading...</p>
+        <p id="artist">Artist: </p>
+    </div>
+    <p id="error-msg">This extension only works on <b>Spotify</b>!</p>
+    <script src="src/main.tsx" type="module"></script>
+</body>
+</html>
+

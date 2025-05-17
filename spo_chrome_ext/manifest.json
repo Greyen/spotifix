@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Now Playing Scraper",
+    "version": "1.0",
+    "description": "Shows the currently playing song and scrapes the page.",
+    "permissions": ["activeTab", "scripting", "storage"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "src/background.js"
+    },
+    "action": {
+      "default_popup": "index.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://open.spotify.com/*"],
+        "js": ["src/content/content.ts"]
+      }
+    ]
+  }
+  
